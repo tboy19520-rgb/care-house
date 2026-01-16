@@ -1,0 +1,194 @@
+* {
+    margin: 10px;
+}
+.header p {
+    font-size: 20px;
+    text-align: center;
+    /* padding: 30px; */
+    font-weight: 600;
+}
+.navbar {
+    background-color: aqua;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.dropbtn,
+.cancel-btn {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -110%;
+    width: 380px;
+    height: 100vh;
+    background: #111;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    transform: translateX(-100%);
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.nbar {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.nbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.nbar li {
+    list-style: none;
+}
+
+.nbar li a:hover {
+    color: chocolate;
+    transform: scale(1.2);
+    display: inline-block;
+}
+.bar {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.bar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.bar li {
+    list-style: none;
+}
+
+.bar li a:hover {
+    color: chocolate;
+    transform: scale(1.2);
+    display: inline-block;
+}
+
+.services {
+    padding: 30px;
+    box-shadow: 0px 5px 30px 5px rgb(0.2, 0.2, 0.3);
+    border-radius: 5px;
+}
+
+.services h1 {
+    font-size: 30px;
+}
+.ulli{
+    display: flex;
+}
+.ulli div{
+    display: flex;
+}
+.ulli ul li {
+    text-align: center;
+    line-height: 1.7;
+}
+.ei{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.sei{
+    display: flex;
+    flex-direction: column;
+}
+.lei{
+    margin-left: -750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul {
+    /* text-align: left; */
+    font-size: larger;
+    list-style: none;
+}
+
+.services,
+h1,
+h3,
+p {
+    text-align: center;
+}
+
+.care {
+    margin-left: -30px;
+    width: 280px;
+    border-radius: 50%;
+}
+@media (max-width:768px){
+    *{
+        margin: 3px;
+    }
+        .nbar{
+        display: none;
+    }
+    .bar {
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 60px;
+        
+    }
+    .dropbtn {
+        display: block;
+        margin: auto;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .cancel-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        margin-left: auto;
+        cursor: pointer;
+    }
+    .ulli{
+        flex-direction: column;
+    }
+    .flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .ei li{
+        width: 200px;
+    }
+    #llei{
+        margin-left: 490px;
+    }
+}
+@media (max-width: 480px) {
+    .sidebar {
+        width: 90%;
+    }
+}

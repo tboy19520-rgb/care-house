@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./contact.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="header">
+            <p>ODUNADE CARE HOME</p>
+        </div>
+        <ul class="nbar">
+            <li><a href="care.html">Home</a></li>
+            <!-- <li><a href="#about">About Us</a></li> -->
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <!-- <li><a href="Reach.html">Contact</a></li> -->
+        </ul>
+        <button class="dropbtn" id="openMenu">
+            <!-- hamburger svg -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24">
+                <path fill="#000" d="M4 17.27v-1h16v1zm0-4.77v-1h16v1zm0-4.77v-1h16v1z" />
+            </svg>
+        </button>
+
+        <div class="overlay" id="overlay"></div>
+
+        <div class="sidebar" id="sidebar">
+            <button class="cancel-btn" id="closeMenu">
+                <!-- X svg -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24">
+                    <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M18 6L6 18m12 0L6 6" />
+                </svg>
+            </button>
+
+            <ul class="bar">
+                <li><a href="care.html">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <!-- <li><a href="Reach.html">Contact</a></li> -->
+            </ul>
+        </div>
+    </nav>
+    <div class="reach">
+        <div id="contact">
+            <form action="" id="form" class="form">
+                <h1>Registration Form</h1>
+                <div class="label">
+                    <!-- <label for="">First Name:</label> -->
+                    <input type="text" placeholder="Input First Name" required>
+                </div><br>
+                <div class="label">
+                    <!-- <label for="">Last Name:</label> -->
+                    <input type="text" placeholder="Input Last Name" required>
+                </div><br>
+                <div class="label">
+                    <!-- <label for="">Email:</label> -->
+                    <input type="email" name="" id="" placeholder="Input Email" required>
+                </div><br>
+                <div class="label">
+                    <!-- <label for="">Phone Number:</label> -->
+                    <input type="tel" placeholder="Input Phone Number" required>
+                </div><br>
+                <button class="submit" type="submit">Submit</button><br><br>
+                <a href="care.html">Home Page</a>
+            </form>
+        </div>
+        <div>
+            <h3>You can reach us through the following ways:</h3>
+            <ul>
+                <li>Email:odundoc2008@gmail.com</li>
+                <li>Phone Number:+234 8034173169, +234 7012524507</li>
+                <li>Address:No 57, Amen Estate, Lagos, Nigeria</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.getElementById("form").addEventListener('submit', function (event) {
+            event.preventDefault()
+            alert("You Have Successfully Submitted Your Form")
+        })
+        const openMenu = document.getElementById("openMenu");
+        const closeMenu = document.getElementById("closeMenu");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+
+        openMenu.onclick = () => {
+            sidebar.classList.add("active");
+            overlay.classList.add("active");
+            document.body.style.overflow = "hidden";
+        };
+
+        closeMenu.onclick = () => {
+            sidebar.classList.remove("active");
+            overlay.classList.remove("active");
+            document.body.style.overflow = "";
+        };
+
+        overlay.onclick = () => {
+            sidebar.classList.remove("active");
+            overlay.classList.remove("active");
+            document.body.style.overflow = "";
+        };
+    </script>
+</body>
+
+</html>

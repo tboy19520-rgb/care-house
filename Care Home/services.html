@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./services.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="header">
+            <p>ODUNADE CARE HOME</p>
+        </div>
+        <ul class="nbar">
+            <li><a href="care.html">Home</a></li>
+            <!-- <li><a href="#about">About Us</a></li> -->
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <!-- <li><a href="Reach.html">Contact</a></li> -->
+        </ul>
+        <button class="dropbtn" id="openMenu">
+            <!-- hamburger svg -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24">
+                <path fill="#000" d="M4 17.27v-1h16v1zm0-4.77v-1h16v1zm0-4.77v-1h16v1z" />
+            </svg>
+        </button>
+
+        <div class="overlay" id="overlay"></div>
+
+        <div class="sidebar" id="sidebar">
+            <button class="cancel-btn" id="closeMenu">
+                <!-- X svg -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24">
+                    <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M18 6L6 18m12 0L6 6" />
+                </svg>
+            </button>
+
+            <ul class="bar">
+                <li><a href="care.html">Home</a></li>
+                <!-- <li><a href="#about">About Us</a></li> -->
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <!-- <li><a href="Reach.html">Contact</a></li> -->
+            </ul>
+        </div>
+    </nav>
+    <div class="allser">
+        <div class="services">
+            <h1>Our Adult Care Services</h1>
+            <h3>We provide compassionate support tailored to each individual's needs:</h3>
+            <ul class="ulli">
+                <div class="flex">
+                    <div class="ei">
+                        <img class="care" src="./img/Care3.PNG" alt="">
+                        <li>Elderly Care: Assistance with daily living, companionship, medication management, meals, and
+                            more.
+                        </li>
+                    </div>
+                    <div class="ei">
+                        <img class="care" src="./img/Care4.PNG" alt="">
+                        <li>Disability Support: Help with personal care, mobility, daily tasks, and getting to
+                            appointments.
+                        </li>
+                    </div>
+                </div>
+                <div class="sei">
+                    <div class="ei">
+                        <img class="care" src="./img/Care2.PNG" alt="">
+                        <li>Chronic Illness Management: Support for conditions like diabetes, heart disease - managing
+                            meds
+                            and
+                            health.</li>
+
+                    </div>
+                    <div class="lei">
+                        <div class="ei">
+                            <img class="care" src="./img/Care1.PNG" alt="">
+                            <li>Post-Surgery Care: Recovery help at home - <br>wound care, therapy support.</li>
+                        </div>
+                        <div id="llei" class="ei">
+                            <img class="care" src="./img/Care5.PNG" alt="">
+                            <li>Palliative Care: Comfort-focused support for <br> serious illnesses.</li>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+            <!-- <p>Want to learn more about how we can help?</p><a href="Reach.html">Contact Us</a> -->
+        </div>
+    </div>
+    <script>
+        const openMenu = document.getElementById("openMenu");
+        const closeMenu = document.getElementById("closeMenu");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+
+        openMenu.onclick = () => {
+            sidebar.classList.add("active");
+            overlay.classList.add("active");
+            document.body.style.overflow = "hidden";
+        };
+
+        closeMenu.onclick = () => {
+            sidebar.classList.remove("active");
+            overlay.classList.remove("active");
+            document.body.style.overflow = "";
+        };
+
+        overlay.onclick = () => {
+            sidebar.classList.remove("active");
+            overlay.classList.remove("active");
+            document.body.style.overflow = "";
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,360 @@
+.header p {
+    font-size: 20px;
+    text-align: center;
+    /* padding: 30px; */
+    /* font-weight: 600; */
+}
+
+.header {
+    /* background-color: chocolate; */
+    /* margin-top: -70px; */
+    /* margin-bottom: -60px; */
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    padding: 10px;
+    background-color: aqua;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.dropbtn,
+.cancel-btn {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 380px;
+    height: 100vh;
+    background: #111;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    transform: translateX(-100%);
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* .dropbtn{
+    display: none;
+} */
+/* .cancel-btn{
+    display: none;
+} */
+.bar {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.bar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.bar li {
+    list-style: none;
+}
+
+.bar li a:hover {
+    color: chocolate;
+    transform: scale(1.2);
+    display: inline-block;
+}
+.nbar {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.nbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.nbar li {
+    list-style: none;
+}
+
+.nbar li a:hover {
+    color: chocolate;
+    transform: scale(1.2);
+    display: inline-block;
+}
+.hero {
+    cursor: pointer;
+    background-image: url(./img/Care1.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    background-position: center;
+    padding: 50px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.hero h2 {
+    text-align: center;
+    font-size: 50px;
+    box-shadow: 2px 5px 18px rgb(56, 8, 8);
+    background-color: aqua;
+    border: 1px;
+    border-radius: 5px;
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.hero h2:hover {
+    opacity: 1;
+}
+
+#about {
+    display: flex;
+    padding: 15px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+#about:hover {
+    box-shadow: 0px 5px 30px 5px rgb(0.2, 0.2, 0.3);
+    transition: 1.0s ease;
+    /* animation: ease-in; */
+    /* animation-delay: 1s; */
+}
+
+#about h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+#about h3 {
+    font-size: 25px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.serene h1 {
+    text-align: center;
+}
+
+.serene a {
+    margin-left: 550px;
+    text-decoration: none;
+    color: black;
+}
+
+.serene a:hover {
+    color: red;
+}
+
+.ffacilities {
+    display: flex;
+    justify-content: center;
+}
+
+.facilities {
+    padding: 20px;
+}
+
+.facilities img {
+    border-radius: 5px;
+}
+
+.facilities img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.facilities p {
+    text-align: center;
+    max-width: 250px;
+}
+
+.facilities:hover {
+    box-shadow: 0px 5px 30px 5px rgb(0.2, 0.2, 0.3);
+    border-radius: 15px;
+    transition: 0.9s ease;
+    cursor: pointer;
+}
+
+.feed {
+    text-align: center;
+    cursor: pointer;
+}
+
+.comments {
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.comments p {
+    text-align: center;
+    max-width: 250px;
+    line-height: 1.7;
+    padding: 20px;
+}
+
+.comments p:hover {
+    box-shadow: 0px 5px 30px 5px rgb(0.2, 0.2, 0.3);
+    border-radius: 15px;
+    transition: 0.9s ease;
+    transform: scale(1.05);
+}
+
+.footer {
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    margin-left: 400px;
+    gap: 50px;
+}
+
+.footer h3 {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .nbar{
+        display: none;
+    }
+    .bar {
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 60px;
+        
+    }
+    .dropbtn {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .cancel-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        margin-left: auto;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 90%;
+    }
+}
+
+@media (max-width: 786px) {
+    * {
+        margin: 0;
+    }
+
+    /* .dropdown{
+        width: 100%;
+    } */
+    .bar {
+        /* display: none; */
+        position: relative;
+        width: 100%;
+    }
+
+    /* .bar a{
+        display: block;
+        padding: 10px;
+    }
+    .dropdown:hover .bar{
+        display: block;
+    } */
+    /* .cancel-btn{ */
+    /* display: none; */
+    /* width: 100%; */
+    /* padding: 10px; */
+    /* border: none; */
+    /* background-color: white; */
+    /* cursor: pointer; */
+    /* } */
+    /* .bar.show .cancel-btn{
+        display: block
+    } */
+    .hero {
+        margin-top: 50px;
+    }
+
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    #about {
+        flex-direction: column;
+    }
+
+    .fimg img {
+        width: 100%;
+    }
+
+    .ffacilities {
+        flex-direction: column;
+    }
+
+    .facilities {
+        margin: auto;
+    }
+
+    .serene a {
+        display: none;
+    }
+
+    .comments {
+        flex-direction: column;
+    }
+
+    .comments p {
+        margin: auto;
+    }
+
+    .footer {
+        margin: auto;
+        flex-direction: column;
+    }
+}
